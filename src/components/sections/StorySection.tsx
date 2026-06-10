@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MapPin, Clock, Car, Phone } from "lucide-react";
 import { BUSINESS, SERVICES } from "@/lib/constants";
 
@@ -28,9 +29,23 @@ export function StorySection() {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Image + Story row */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
-          {/* Story — takes 3/5 columns */}
-          <div className="lg:col-span-3">
+          {/* Photo — 2/5 columns */}
+          <div className="lg:col-span-2">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+              <Image
+                src="/images/about/about.jpg"
+                alt="Tapas Ghosh — owner of Akash Car Service & Driver Centre, New Barrackpore, Kolkata"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
+          </div>
+
+          {/* Story — 3/5 columns */}
+          <div className="flex flex-col justify-center lg:col-span-3">
             <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
               Our Story
             </span>
@@ -38,9 +53,10 @@ export function StorySection() {
               A Trusted Name in Transport
             </h2>
             <p className="mt-6 font-body text-lg leading-relaxed text-gray-700">
-              {BUSINESS.name} is a trusted transport business based in New Barrackpore, Kolkata. We
-              provide a wide range of vehicle and driver hire services — from daily car rentals and
-              professional driver hire to bus, tempo, truck, and wedding vehicle services.
+              Founded and run by {BUSINESS.ownerName}, {BUSINESS.name} is a trusted transport
+              business based in New Barrackpore, Kolkata. We provide a wide range of vehicle and
+              driver hire services — from daily car rentals and professional driver hire to bus,
+              tempo, truck, and wedding vehicle services.
             </p>
             <p className="mt-4 font-body text-lg leading-relaxed text-gray-700">
               We serve customers across the entire Kolkata region and throughout West Bengal,
@@ -56,35 +72,33 @@ export function StorySection() {
               Call us — {BUSINESS.phonePrimary}
             </a>
           </div>
+        </div>
 
-          {/* Service area callout — takes 2/5 columns */}
-          <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-gray-100 bg-gray-50 p-8">
-              <h3 className="font-heading text-xl font-semibold tracking-wide text-gray-900">
-                Where We Operate
-              </h3>
-              <ul className="mt-6 flex flex-col gap-5">
-                {AREA_HIGHLIGHTS.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <li key={item.label} className="flex items-start gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-red">
-                        <Icon size={16} className="text-white" aria-hidden="true" />
-                      </div>
-                      <div>
-                        <p className="font-body text-xs font-medium uppercase tracking-wider text-gray-500">
-                          {item.label}
-                        </p>
-                        <p className="mt-0.5 font-body text-sm font-semibold text-gray-900">
-                          {item.value}
-                        </p>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
+        {/* Where We Operate — full-width card below */}
+        <div className="mt-12 rounded-2xl border border-gray-100 bg-gray-50 p-8">
+          <h3 className="font-heading text-xl font-semibold tracking-wide text-gray-900">
+            Where We Operate
+          </h3>
+          <ul className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {AREA_HIGHLIGHTS.map((item) => {
+              const Icon = item.icon;
+              return (
+                <li key={item.label} className="flex items-start gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-red">
+                    <Icon size={16} className="text-white" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="font-body text-xs font-medium uppercase tracking-wider text-gray-500">
+                      {item.label}
+                    </p>
+                    <p className="mt-0.5 font-body text-sm font-semibold text-gray-900">
+                      {item.value}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </section>
