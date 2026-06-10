@@ -22,7 +22,7 @@ export default function NotFound() {
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link
             href="/"
-            className="inline-flex h-11 items-center justify-center rounded-lg bg-brand-red px-6 font-body text-sm font-medium text-white transition-colors hover:bg-brand-red-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-brand-red px-6 font-body text-sm font-medium text-white transition-colors hover:bg-brand-red-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2"
           >
             Go Home
           </Link>

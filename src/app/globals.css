@@ -1,10 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colours */
-  --color-brand-red: #dc2626;
-  --color-brand-red-dark: #b91c1c;
-  --color-brand-black: #0f0f0f;
+  /* Backgrounds / surfaces */
+  --color-brand-black: #05070b;
+  --color-surface-dark: #0f172a;
+  --color-card-surface: #111827;
+
+  /* Brand red */
+  --color-brand-red: #e11d2e;
+  --color-brand-red-hover: #be123c;
+
+  /* Accent */
+  --color-brand-gold: #d4a017;
+
+  /* Text */
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+
+  /* Functional */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #128c7e;
+  --color-success: #16a34a;
 
   /* Font families — CSS variables injected by next/font at runtime */
   --font-heading: var(--font-oswald), sans-serif;
@@ -24,8 +40,8 @@ html {
 body {
   min-height: 100vh;
   font-family: var(--font-body);
-  color: #111827;
-  background-color: #ffffff;
+  color: #f8fafc;
+  background-color: #05070b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

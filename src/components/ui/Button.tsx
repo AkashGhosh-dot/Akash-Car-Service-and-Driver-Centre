@@ -28,10 +28,10 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-lg font-medium font-body transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-brand-red text-white hover:bg-brand-red-dark active:scale-95",
+  primary: "bg-brand-red text-white hover:bg-brand-red-hover active:scale-95",
   secondary:
-    "border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-white active:scale-95",
-  whatsapp: "bg-[#25D366] text-white hover:bg-[#128C7E] active:scale-95",
+    "border-2 border-white/60 text-white hover:bg-white/10 hover:border-white active:scale-95",
+  whatsapp: "bg-whatsapp text-white hover:bg-whatsapp-hover active:scale-95",
   ghost: "text-brand-red hover:underline",
 };
 

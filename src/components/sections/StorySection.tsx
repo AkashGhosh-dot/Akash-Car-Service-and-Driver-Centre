@@ -66,7 +66,7 @@ export function StorySection() {
             </p>
             <a
               href={`tel:+91${BUSINESS.phonePrimary}`}
-              className="mt-8 inline-flex items-center gap-2 font-body text-base font-medium text-brand-red transition-colors hover:text-brand-red-dark"
+              className="mt-8 inline-flex items-center gap-2 font-body text-base font-medium text-brand-red transition-colors hover:text-brand-red-hover"
             >
               <Phone size={16} aria-hidden="true" />
               Call us — {BUSINESS.phonePrimary}

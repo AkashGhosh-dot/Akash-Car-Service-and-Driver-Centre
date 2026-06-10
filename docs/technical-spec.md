@@ -42,7 +42,8 @@ This is a static local business marketing site. The priorities in order are: **l
 | Prisma / Supabase  | No database needed for v1 — all content is static                            |
 | Next-Auth          | No user login in v1                                                           |
 | Contentful / Sanity| No CMS in v1; content changes are infrequent and can be code deploys          |
-| Framer Motion      | Animation library adds JS weight; CSS transitions are sufficient for this site |
+| ~~Framer Motion~~  | ~~Animation library adds JS weight~~ — **reversed**: hero requires a choreographed 5-phase animation sequence that CSS transitions cannot orchestrate cleanly. Added in v1 for hero section only (~50 KB gzipped). Net saving vs Three.js geometric prototype: −150 KB. |
+| Three.js / R3F     | Installed briefly for a geometric prototype; removed in favour of Framer Motion + SVG approach (−200 KB, better Lighthouse score, no WebGL dependency) |
 | Google Maps JS API | Requires API key billing setup; a plain `<iframe>` embed is free and sufficient |
 | Formspree / Web3Forms | Third-party dependency; a Route Handler + Resend is clean and keeps us in control |
 
@@ -335,6 +336,7 @@ tailwindcss   (v4)
 clsx
 tailwind-merge
 lucide-react
+framer-motion   (hero animation — ~50 KB gzipped)
 ```
 
 Note: Tailwind v4 no longer requires `postcss` or `autoprefixer` as separate dependencies — they are bundled.
@@ -398,3 +400,4 @@ Before writing a single line of application code, confirm:
 | 2026-06-09 | Blocker 10 resolved — GitHub repo confirmed | Akash |
 | 2026-06-10 | Updated to Tailwind CSS v4 — config moves from tailwind.config.ts into globals.css @theme block | Claude |
 | 2026-06-10 | Added Prettier + eslint-config-prettier to dev dependencies | Claude |
+| 2026-06-10 | Framer Motion added for hero animation — 5-phase choreographed sequence (CSS transitions insufficient). Three.js removed. Net bundle: −150 KB. | Akash/Claude |

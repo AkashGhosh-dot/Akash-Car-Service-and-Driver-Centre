@@ -63,7 +63,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
       {/* Backdrop */}
       <div
         className={cn(
-          "fixed inset-0 z-50 bg-black/50 transition-opacity duration-250 md:hidden",
+          "fixed inset-0 z-50 bg-black/70 backdrop-blur-sm transition-opacity duration-250 md:hidden",
           isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         )}
         aria-hidden="true"
@@ -79,17 +79,21 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         aria-label="Navigation menu"
         onKeyDown={handleKeyDown}
         className={cn(
-          "fixed right-0 top-0 z-50 flex h-full w-72 flex-col bg-white shadow-xl transition-transform duration-250 md:hidden",
+          "fixed right-0 top-0 z-50 flex h-full w-72 flex-col bg-brand-black shadow-2xl transition-transform duration-250 md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         {/* Drawer header */}
-        <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
-          <Link href="/" onClick={onClose} className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-1">
+        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+          <Link
+            href="/"
+            onClick={onClose}
+            className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black"
+          >
             <span className="block font-heading text-2xl font-bold leading-none tracking-wide text-brand-red">
               AKASH
             </span>
-            <span className="block font-body text-[10px] font-medium uppercase tracking-widest text-gray-700">
+            <span className="block font-body text-[10px] font-medium uppercase tracking-widest text-text-muted">
               Car Service &amp; Driver Centre
             </span>
           </Link>
@@ -97,7 +101,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             ref={closeButtonRef}
             onClick={onClose}
             aria-label="Close menu"
-            className="flex h-11 w-11 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
+            className="flex h-11 w-11 items-center justify-center rounded-lg text-white/70 transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
           >
             <X size={22} aria-hidden="true" />
           </button>
@@ -113,8 +117,8 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
               className={cn(
                 "rounded-lg px-4 py-3 font-body text-base font-medium transition-colors",
                 pathname === link.href
-                  ? "bg-red-50 text-brand-red"
-                  : "text-gray-700 hover:bg-gray-50 hover:text-brand-red"
+                  ? "bg-brand-red/10 text-brand-red"
+                  : "text-white/80 hover:bg-white/5 hover:text-white"
               )}
             >
               {link.label}
@@ -123,10 +127,10 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         </nav>
 
         {/* Bottom CTA */}
-        <div className="mt-auto border-t border-gray-100 p-4">
+        <div className="mt-auto border-t border-white/10 p-4">
           <a
             href={`tel:+91${BUSINESS.phonePrimary}`}
-            className="flex h-12 w-full items-center justify-center rounded-lg bg-brand-red font-body text-base font-medium text-white transition-colors hover:bg-brand-red-dark"
+            className="flex h-12 w-full items-center justify-center rounded-lg bg-brand-red font-body text-base font-medium text-white transition-colors hover:bg-brand-red-hover"
           >
             Call Now — {BUSINESS.phonePrimary}
           </a>

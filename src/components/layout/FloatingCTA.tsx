@@ -11,7 +11,7 @@ export function FloatingCTA() {
     >
       <a
         href={`tel:+91${BUSINESS.phonePrimary}`}
-        className="flex flex-1 items-center justify-center gap-2 bg-brand-red font-body text-sm font-medium text-white transition-colors hover:bg-brand-red-dark"
+        className="flex flex-1 items-center justify-center gap-2 bg-brand-red font-body text-sm font-medium text-white transition-colors hover:bg-brand-red-hover"
       >
         <Phone size={18} aria-hidden="true" />
         Call Now

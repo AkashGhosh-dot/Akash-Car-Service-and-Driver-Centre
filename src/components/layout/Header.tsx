@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, Phone } from "lucide-react";
@@ -10,18 +10,37 @@ import { cn } from "@/lib/utils";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 60);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-gray-100 bg-white shadow-sm">
+      <header
+        className={cn(
+          "sticky top-0 z-40 transition-all duration-300",
+          scrolled
+            ? "border-b border-white/10 bg-brand-black shadow-lg shadow-black/40"
+            : "border-b border-transparent bg-transparent"
+        )}
+      >
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2">
+          <Link
+            href="/"
+            className="flex-shrink-0 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black"
+          >
             <span className="block font-heading text-2xl font-bold leading-none tracking-wide text-brand-red">
               AKASH
             </span>
-            <span className="block font-body text-[10px] font-medium uppercase tracking-widest text-gray-700">
+            <span className="block font-body text-[10px] font-medium uppercase tracking-widest text-text-muted">
               Car Service &amp; Driver Centre
             </span>
           </Link>
@@ -36,7 +55,7 @@ export function Header() {
                   "font-body text-sm font-medium transition-colors",
                   pathname === link.href
                     ? "text-brand-red"
-                    : "text-gray-700 hover:text-brand-red"
+                    : "text-white/80 hover:text-white"
                 )}
                 aria-current={pathname === link.href ? "page" : undefined}
               >
@@ -48,7 +67,7 @@ export function Header() {
           {/* Desktop CTA */}
           <a
             href={`tel:+91${BUSINESS.phonePrimary}`}
-            className="hidden items-center gap-2 rounded-lg bg-brand-red px-4 py-2 font-body text-sm font-medium text-white transition-colors hover:bg-brand-red-dark md:flex"
+            className="hidden items-center gap-2 rounded-lg bg-brand-red px-4 py-2 font-body text-sm font-medium text-white transition-colors hover:bg-brand-red-hover md:flex"
           >
             <Phone size={16} aria-hidden="true" />
             {BUSINESS.phonePrimary}
@@ -60,7 +79,7 @@ export function Header() {
             aria-label="Open navigation menu"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
-            className="flex h-11 w-11 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-lg text-white/80 transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red md:hidden"
           >
             <Menu size={22} aria-hidden="true" />
           </button>
