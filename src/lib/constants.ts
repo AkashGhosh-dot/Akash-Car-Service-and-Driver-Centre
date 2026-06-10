@@ -40,6 +40,7 @@ export const SERVICES: Service[] = [
     description:
       "Affordable car hire for any distance, any duration. Self-drive or with a driver — available 24/7 across Kolkata and West Bengal.",
     icon: "Car",
+    imageUrl: "/images/services/car-rental-service.png",
   },
   {
     id: "driver-service",
@@ -47,6 +48,7 @@ export const SERVICES: Service[] = [
     description:
       "Experienced, professional drivers available on-demand for local trips, full-day hire, or outstation journeys. Punctual and reliable, around the clock.",
     icon: "User",
+    imageUrl: "/images/services/driver-service.png",
   },
   {
     id: "traveller-service",
@@ -54,6 +56,7 @@ export const SERVICES: Service[] = [
     description:
       "Spacious traveller vehicles for family trips, group tours, and outstation travel. Ideal for 8–12 passengers with comfort and safety on long journeys.",
     icon: "Users",
+    imageUrl: "/images/services/traveller-service.png",
   },
   {
     id: "wedding-car-service",
@@ -61,6 +64,7 @@ export const SERVICES: Service[] = [
     description:
       "Make your special day unforgettable with our premium wedding fleet. Decorated cars and convoy arrangements for weddings across Kolkata and West Bengal.",
     icon: "Heart",
+    imageUrl: "/images/services/wedding-car-service.png",
   },
   {
     id: "bus-service",
@@ -68,6 +72,7 @@ export const SERVICES: Service[] = [
     description:
       "Comfortable bus hire for group travel, corporate outings, school trips, and pilgrimages. Local and outstation routes covered across West Bengal.",
     icon: "Bus",
+    imageUrl: "/images/services/bus-service.png",
   },
   {
     id: "pickup-van-service",
@@ -75,6 +80,7 @@ export const SERVICES: Service[] = [
     description:
       "Reliable pick-up van hire for small loads, quick deliveries, and goods movement across Kolkata. Ideal for furniture shifting, parcels, and local logistics.",
     icon: "Package",
+    imageUrl: "/images/services/pickup-van-service.png",
   },
   {
     id: "truck-service",
@@ -82,5 +88,6 @@ export const SERVICES: Service[] = [
     description:
       "Heavy-duty truck hire for commercial freight, construction materials, and long-distance goods transport. Covering all major routes across West Bengal.",
     icon: "Truck",
+    imageUrl: "/images/services/truck-service.png",
   },
 ];
