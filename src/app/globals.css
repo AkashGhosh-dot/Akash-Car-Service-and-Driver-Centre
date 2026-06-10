@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colours */
+  --color-brand-red: #dc2626;
+  --color-brand-red-dark: #b91c1c;
+  --color-brand-black: #0f0f0f;
+
+  /* Font families — CSS variables injected by next/font at runtime */
+  --font-heading: var(--font-oswald), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: #111827;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
