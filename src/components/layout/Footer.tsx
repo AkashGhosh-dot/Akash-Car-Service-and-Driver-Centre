@@ -21,8 +21,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-gray-400">
-              Trusted transport across Kolkata &amp; West Bengal. Available 24 hours, 7 days a
-              week.
+              Trusted transport across Kolkata &amp; West Bengal since {BUSINESS.foundedYear}.
+              Available 24 hours, 7 days a week.
             </p>
             <nav className="mt-6" aria-label="Footer navigation">
               <ul className="flex flex-col gap-2">
@@ -120,6 +120,9 @@ export function Footer() {
         <div className="mt-12 border-t border-gray-800 pt-6 text-center">
           <p className="font-body text-xs text-gray-500">
             &copy; {year} {BUSINESS.name}. All rights reserved.
+          </p>
+          <p className="mt-1 font-body text-xs text-gray-600">
+            Serving Kolkata &amp; West Bengal Since {BUSINESS.foundedYear}
           </p>
         </div>
       </div>

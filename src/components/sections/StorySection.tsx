@@ -1,8 +1,13 @@
 import Image from "next/image";
-import { MapPin, Clock, Car, Phone } from "lucide-react";
+import { MapPin, Clock, Car, Phone, Award } from "lucide-react";
 import { BUSINESS, SERVICES } from "@/lib/constants";
 
 const AREA_HIGHLIGHTS = [
+  {
+    icon: Award,
+    label: "Established",
+    value: `${BUSINESS.foundedYear} — Serving for ${new Date().getFullYear() - BUSINESS.foundedYear}+ years`,
+  },
   {
     icon: MapPin,
     label: "Based in",
@@ -50,19 +55,20 @@ export function StorySection() {
               Our Story
             </span>
             <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-gray-900">
-              A Trusted Name in Transport
+              Serving Kolkata Since {BUSINESS.foundedYear}
             </h2>
             <p className="mt-6 font-body text-lg leading-relaxed text-gray-700">
-              Founded and run by {BUSINESS.ownerName}, {BUSINESS.name} is a trusted transport
-              business based in New Barrackpore, Kolkata. We provide a wide range of vehicle and
-              driver hire services — from daily car rentals and professional driver hire to bus,
-              tempo, truck, and wedding vehicle services.
+              Founded in {BUSINESS.foundedYear} and run by {BUSINESS.ownerName},{" "}
+              {BUSINESS.name} has been a trusted transport business in New Barrackpore, Kolkata for
+              over {new Date().getFullYear() - BUSINESS.foundedYear} years. We provide a complete
+              range of vehicle and driver hire services — from car rentals and professional driver
+              hire to bus, traveller, truck, and wedding vehicle services.
             </p>
             <p className="mt-4 font-body text-lg leading-relaxed text-gray-700">
               We serve customers across the entire Kolkata region and throughout West Bengal,
-              available 24 hours a day, 7 days a week. Whether it&apos;s a quick local trip, a
-              full-day hire, or a convoy for your wedding, we have the fleet and the team to make it
-              happen — reliably, safely, and on time.
+              available 24 hours a day, 7 days a week. Very few transport businesses in the region
+              can claim over two decades of continuous, reliable service — and that experience is
+              something our customers feel every time they call.
             </p>
             <a
               href={`tel:+91${BUSINESS.phonePrimary}`}

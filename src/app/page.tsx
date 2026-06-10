@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { TrustBar } from "@/components/sections/TrustBar";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { AboutSnippet } from "@/components/sections/AboutSnippet";
@@ -36,6 +37,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <HeroSection />
+      <TrustBar />
       <ServicesGrid showViewAll />
       <WhyChooseUs />
       <AboutSnippet />

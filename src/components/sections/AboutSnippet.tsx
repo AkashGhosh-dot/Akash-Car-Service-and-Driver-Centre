@@ -11,14 +11,15 @@ export function AboutSnippet() {
             About Us
           </span>
           <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-white">
-            A Name Kolkata Trusts
+            A Name Kolkata Trusts Since 2000
           </h2>
           <p className="mt-6 font-body text-lg leading-relaxed text-gray-300">
-            {BUSINESS.name} is a trusted transport business based in New Barrackpore, Kolkata. We
-            provide a wide range of vehicle and driver hire services — from daily car rentals and
-            professional driver hire to bus, tempo, truck, and wedding vehicle services. We serve
-            customers across the entire Kolkata region and throughout West Bengal, available 24 hours
-            a day, 7 days a week.
+            Established in {BUSINESS.foundedYear}, {BUSINESS.name} has been Kolkata&apos;s trusted
+            transport partner for over {new Date().getFullYear() - BUSINESS.foundedYear} years.
+            Based in New Barrackpore, we provide a complete range of vehicle and driver hire
+            services — from car rentals and professional driver hire to bus, traveller, truck, and
+            wedding vehicle services. Available 24 hours a day, 7 days a week across Kolkata and all
+            of West Bengal.
           </p>
           <Link
             href="/about"

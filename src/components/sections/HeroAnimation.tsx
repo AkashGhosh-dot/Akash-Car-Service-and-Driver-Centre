@@ -44,15 +44,22 @@ export function HeroAnimation() {
       {/* ── Content — left column ── */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
         <div className="flex w-full flex-col items-center text-center md:max-w-[48%] md:items-start md:text-left">
-          {/* Badge */}
+          {/* Badges */}
           <motion.div
             {...fadeLeft(0.05, 0.6)}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-red/30 bg-brand-red/10 px-4 py-2 backdrop-blur-sm"
+            className="mb-6 flex flex-wrap items-center gap-3"
           >
-            <span className="h-2 w-2 animate-pulse rounded-full bg-brand-red" aria-hidden="true" />
-            <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
-              Available 24/7
-            </span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-2 backdrop-blur-sm">
+              <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-gold">
+                Serving Since {BUSINESS.foundedYear}
+              </span>
+            </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-brand-red/30 bg-brand-red/10 px-4 py-2 backdrop-blur-sm">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-brand-red" aria-hidden="true" />
+              <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
+                Available 24/7
+              </span>
+            </div>
           </motion.div>
 
           {/* Headline */}

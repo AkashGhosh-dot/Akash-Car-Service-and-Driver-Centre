@@ -3,6 +3,7 @@ import type { NavLink, Service } from "@/types";
 export const BUSINESS = {
   name: "Akash Car Service & Driver Centre",
   ownerName: "Tapas Ghosh",
+  foundedYear: 2000,
   phones: ["9339865491", "8910068402"],
   phonePrimary: "9339865491",
   whatsapp: "9339865491",

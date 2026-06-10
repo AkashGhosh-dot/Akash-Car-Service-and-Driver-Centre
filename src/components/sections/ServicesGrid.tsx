@@ -29,7 +29,7 @@ export function ServicesGrid({
         {/* Section heading */}
         <div className="text-center">
           <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
-            What We Offer
+            Trusted Since 2000
           </span>
           <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-white">
             Our Services
