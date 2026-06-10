@@ -55,58 +55,26 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
       className="relative overflow-hidden py-16 md:py-24"
       style={{
         background:
-          "linear-gradient(150deg, #050E1F 0%, #0A1830 35%, #0E2248 65%, #0B1D40 100%)",
+          "linear-gradient(135deg, #EAF4FF 0%, #DCEEFF 50%, #F8FBFF 100%)",
       }}
     >
-      {/* ── Background depth layers — referencing luminous blue gradient ── */}
-
-      {/* Top-right luminous zone — the bright white-silver glow from the reference */}
+      {/* Subtle top-right accent glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 58% 52% at 88% 2%, rgba(148,200,255,0.28) 0%, transparent 65%)",
+            "radial-gradient(ellipse 55% 48% at 92% 5%, rgba(59,130,246,0.12) 0%, transparent 65%)",
         }}
       />
 
-      {/* Top-left dark pool — the deep navy corner in the reference */}
+      {/* Subtle bottom-left accent glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 42% 38% at 2% 3%, rgba(5,10,28,0.65) 0%, transparent 55%)",
-        }}
-      />
-
-      {/* Sky-blue ambient — centre-left, the main blue zone in the reference */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 65% 58% at 25% 65%, rgba(56,140,246,0.18) 0%, transparent 68%)",
-        }}
-      />
-
-      {/* Cyan bottom glow — the light aqua at the bottom of the reference */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 78% 44% at 65% 100%, rgba(96,186,255,0.16) 0%, transparent 62%)",
-        }}
-      />
-
-      {/* Edge vignette — keeps card text readable */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 110% 90% at 50% 50%, transparent 38%, rgba(5,10,20,0.50) 100%)",
+            "radial-gradient(ellipse 50% 44% at 5% 95%, rgba(99,155,255,0.10) 0%, transparent 60%)",
         }}
       />
 
@@ -116,10 +84,10 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
           <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
             Why Us
           </span>
-          <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-white">
+          <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-gray-900">
             Why Choose Akash?
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl font-body text-base text-text-secondary">
+          <p className="mx-auto mt-3 max-w-2xl font-body text-base text-gray-600">
             Over {years} years of continuous service across Kolkata — thousands of customers trust
             us for reliable, on-time transport every single day.
           </p>
@@ -140,10 +108,10 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
                   <Icon size={22} className="text-white" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-semibold tracking-wide text-white">
+                  <h3 className="font-heading text-lg font-semibold tracking-wide text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="mt-1 font-body text-sm leading-relaxed text-text-secondary">
+                  <p className="mt-1 font-body text-sm leading-relaxed text-gray-600">
                     {item.description}
                   </p>
                 </div>
@@ -155,4 +123,3 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
     </section>
   );
 }
-

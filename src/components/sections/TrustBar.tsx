@@ -13,13 +13,13 @@ export function TrustBar() {
   ];
 
   return (
-    <div className="border-y border-white/10 bg-surface-dark py-4">
+    <div className="border-y border-gray-200 bg-white py-4">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           {items.map((item) => (
             <li key={item} className="inline-flex items-center gap-2">
               <Check size={14} className="shrink-0 text-success" aria-hidden="true" />
-              <span className="font-body text-sm font-medium text-white/80">{item}</span>
+              <span className="font-body text-sm font-medium text-slate-700">{item}</span>
             </li>
           ))}
         </ul>

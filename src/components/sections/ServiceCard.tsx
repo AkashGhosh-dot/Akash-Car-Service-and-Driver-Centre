@@ -26,7 +26,7 @@ export function ServiceCard({ service, variant = "compact" }: ServiceCardProps) 
   return (
     <div
       id={service.id}
-      className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-card-surface transition-all duration-300 hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-xl hover:shadow-black/40"
+      className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-red/30 hover:shadow-xl hover:shadow-gray-200/80"
     >
       {/* Image or placeholder */}
       <div className="relative aspect-[16/9] overflow-hidden">
@@ -43,8 +43,7 @@ export function ServiceCard({ service, variant = "compact" }: ServiceCardProps) 
               aria-hidden="true"
               className="absolute inset-x-0 bottom-0 h-12"
               style={{
-                background:
-                  "linear-gradient(to top, rgba(17,24,39,0.85) 0%, transparent 100%)",
+                background: "linear-gradient(to top, rgba(255,255,255,0.6) 0%, transparent 100%)",
               }}
             />
           </>
@@ -52,13 +51,12 @@ export function ServiceCard({ service, variant = "compact" }: ServiceCardProps) 
           <div
             className="flex h-full w-full items-center justify-center"
             style={{
-              background:
-                "linear-gradient(135deg, #0f172a 0%, #111827 60%, rgba(225,29,46,0.08) 100%)",
+              background: "linear-gradient(135deg, #EAF4FF 0%, #DCEEFF 60%, #F8FBFF 100%)",
             }}
           >
             <Icon
               size={isDetail ? 48 : 40}
-              className="text-brand-red/50"
+              className="text-brand-red/60"
               aria-hidden="true"
             />
           </div>
@@ -68,14 +66,14 @@ export function ServiceCard({ service, variant = "compact" }: ServiceCardProps) 
       {/* Content */}
       <div className="flex flex-1 flex-col p-5">
         <h3
-          className={`font-heading font-semibold tracking-wide text-white ${
+          className={`font-heading font-semibold tracking-wide text-gray-900 ${
             isDetail ? "text-2xl" : "text-lg"
           }`}
         >
           {service.name}
         </h3>
 
-        <p className="mt-2 flex-1 font-body text-sm leading-relaxed text-text-secondary line-clamp-3">
+        <p className="mt-2 flex-1 font-body text-sm leading-relaxed text-gray-600 line-clamp-3">
           {service.description}
         </p>
 
