@@ -7,13 +7,14 @@ import { CTABanner } from "@/components/sections/CTABanner";
 export const metadata: Metadata = {
   title: "About Us — Akash Car Service & Driver Centre",
   description:
-    "Learn about Akash Car Service & Driver Centre — a trusted transport business in New Barrackpore, Kolkata. Car rentals, driver hire & more across West Bengal, 24/7.",
+    "Akash Car Service & Driver Centre — a trusted transport business in New Barrackpore, Kolkata. Car rentals, driver hire & transport across West Bengal, 24/7.",
   openGraph: {
     title: "About Us — Akash Car Service & Driver Centre",
     description:
       "Trusted transport across Kolkata & West Bengal. Car rentals, driver hire, bus, truck and wedding vehicles. Available 24 hours, 7 days a week.",
     url: "https://akashcarservice.in/about",
     siteName: "Akash Car Service & Driver Centre",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Akash Car Service & Driver Centre" }],
     locale: "en_IN",
     type: "website",
   },

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Car rentals, driver hire, bus, truck & wedding vehicles across Kolkata & West Bengal. Available 24/7. Call or WhatsApp for a quote.",
     url: "https://akashcarservice.in/services",
     siteName: "Akash Car Service & Driver Centre",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Akash Car Service & Driver Centre" }],
     locale: "en_IN",
     type: "website",
   },
