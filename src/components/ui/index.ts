@@ -1,1 +1,3 @@
-// UI primitives — populated in Phase 1
+export { Button, type ButtonProps } from "./Button";
+export { Card } from "./Card";
+export { Badge } from "./Badge";

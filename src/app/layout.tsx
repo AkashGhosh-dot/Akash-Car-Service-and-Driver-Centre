@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingCTA } from "@/components/layout/FloatingCTA";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -33,7 +36,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body className="flex min-h-screen flex-col pb-14 md:pb-0">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <FloatingCTA />
+      </body>
     </html>
   );
 }
