@@ -51,8 +51,66 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
   const items = limit ? USP_ITEMS.slice(0, limit) : USP_ITEMS;
 
   return (
-    <section className="bg-surface-dark py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section
+      className="relative overflow-hidden py-16 md:py-24"
+      style={{
+        background:
+          "linear-gradient(150deg, #050E1F 0%, #0A1830 35%, #0E2248 65%, #0B1D40 100%)",
+      }}
+    >
+      {/* ── Background depth layers — referencing luminous blue gradient ── */}
+
+      {/* Top-right luminous zone — the bright white-silver glow from the reference */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 58% 52% at 88% 2%, rgba(148,200,255,0.28) 0%, transparent 65%)",
+        }}
+      />
+
+      {/* Top-left dark pool — the deep navy corner in the reference */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 42% 38% at 2% 3%, rgba(5,10,28,0.65) 0%, transparent 55%)",
+        }}
+      />
+
+      {/* Sky-blue ambient — centre-left, the main blue zone in the reference */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 65% 58% at 25% 65%, rgba(56,140,246,0.18) 0%, transparent 68%)",
+        }}
+      />
+
+      {/* Cyan bottom glow — the light aqua at the bottom of the reference */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 78% 44% at 65% 100%, rgba(96,186,255,0.16) 0%, transparent 62%)",
+        }}
+      />
+
+      {/* Edge vignette — keeps card text readable */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 110% 90% at 50% 50%, transparent 38%, rgba(5,10,20,0.50) 100%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">
           <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
@@ -97,3 +155,4 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
     </section>
   );
 }
+
