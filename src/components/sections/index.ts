@@ -1,1 +1,8 @@
-// Section components — populated in Phase 2
+export { HeroSection } from "./HeroSection";
+export { ServiceCard } from "./ServiceCard";
+export { ServicesGrid } from "./ServicesGrid";
+export { WhyChooseUs } from "./WhyChooseUs";
+export { AboutSnippet } from "./AboutSnippet";
+export { MapEmbed } from "./MapEmbed";
+export { ContactSection } from "./ContactSection";
+export { CTABanner } from "./CTABanner";
