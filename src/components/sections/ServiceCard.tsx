@@ -24,7 +24,10 @@ export function ServiceCard({ service, variant = "compact" }: ServiceCardProps) 
   const isDetail = variant === "detail";
 
   return (
-    <div className="group flex flex-col rounded-xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+    <div
+      id={service.id}
+      className="group flex flex-col rounded-xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+    >
       {/* Icon */}
       <div
         className={`flex items-center justify-center rounded-lg bg-red-50 ${isDetail ? "h-14 w-14" : "h-12 w-12"}`}

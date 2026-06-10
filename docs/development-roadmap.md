@@ -335,35 +335,49 @@ feat: add sitemap, robots, JSON-LD structured data, and complete metadata
 ### QA Checklist
 
 **Functionality**
-- [ ] All `tel:` links open dialler on mobile
-- [ ] All `wa.me` links open WhatsApp with pre-filled message
-- [ ] All `mailto:` links open email client
-- [ ] Mobile navigation opens and closes
-- [ ] All internal links navigate correctly (no 404s)
-- [ ] FloatingCTA visible on mobile, hidden on desktop
+- [x] All `tel:` links open dialler on mobile — verified in code, all use `tel:+91${BUSINESS.phonePrimary}`
+- [x] All `wa.me` links open WhatsApp with pre-filled message — verified in code
+- [x] All `mailto:` links open email client — verified in code
+- [x] Mobile navigation opens and closes — verified in code (focus trap, Escape key, backdrop click)
+- [x] All internal links navigate correctly (no 404s) — verified; custom `not-found.tsx` added
+- [x] FloatingCTA visible on mobile, hidden on desktop — `md:hidden` verified in code
 
 **Responsiveness**
-- [ ] 375px (iPhone SE) — no overflow, no broken layout
-- [ ] 768px (iPad) — no overflow, no broken layout
-- [ ] 1280px (Desktop) — no overflow, no broken layout
+- [ ] 375px (iPhone SE) — **manual test required on device or BrowserStack**
+- [ ] 768px (iPad) — **manual test required**
+- [ ] 1280px (Desktop) — **manual test required**
 
 **Content**
-- [ ] No placeholder text remaining (no "[CONFIRM]", "[TBC]", etc.)
-- [ ] Business name spelling correct on all pages
-- [ ] Phone numbers correct and match throughout
-- [ ] Address correct
-- [ ] All image `alt` texts are descriptive
+- [x] No placeholder text remaining — only "Map coming soon" (intentional per BR-064)
+- [x] Business name spelling correct on all pages — sourced from `BUSINESS.name` constant
+- [x] Phone numbers correct and match throughout — sourced from `BUSINESS.phones`, hardcoded instance in MobileNav fixed
+- [x] Address correct — sourced from `BUSINESS.address.full` constant
+- [x] All image `alt` texts are descriptive — N/A: no images in v1 (BR-063 deferred to post-launch)
 
 **SEO / Technical**
-- [ ] No duplicate `<h1>` tags on any page
-- [ ] All pages in sitemap.xml
-- [ ] JSON-LD validates on all required pages
-- [ ] No broken images
-- [ ] HTTPS (auto via Vercel)
+- [x] No duplicate `<h1>` tags on any page — one `<h1>` per page verified
+- [x] All pages in sitemap.xml — 4 pages confirmed
+- [x] JSON-LD present on all required pages — /, /services, /contact
+- [x] No broken images — no images in v1
+- [ ] HTTPS — auto via Vercel (confirms at deployment)
+
+### Issues Found and Fixed
+| Issue | File | Fix |
+|-------|------|-----|
+| Hardcoded phone number literal | `MobileNav.tsx` | Changed to `BUSINESS.phonePrimary` |
+| ServiceCard missing `id` attribute | `ServiceCard.tsx` | Added `id={service.id}` — footer anchor links now work |
+| Logo links missing focus indicator | `Header.tsx`, `MobileNav.tsx`, `Footer.tsx` | Added `focus-visible:ring-2 focus-visible:ring-brand-red` |
+| `not-found.tsx` missing from codebase | — | Created branded 404 page |
+
+### Remaining Manual Tests (before deployment)
+- Lighthouse audit on all 4 pages (mobile): Performance ≥ 90, Accessibility ≥ 90, SEO ≥ 95
+- Visual layout at 375px / 768px / 1280px — no overflow, no broken layout
+- Test all `tel:` and `wa.me` links on a real mobile device
+- Validate JSON-LD with [Google Rich Results Test](https://search.google.com/test/rich-results)
 
 ### Commit
 ```
-fix: QA fixes — [list any issues found]
+fix: QA — fix hardcoded phone, add service anchor IDs, focus rings, 404 page
 ```
 
 ---
@@ -415,3 +429,5 @@ Ordered by priority. Do not start until v1 is live and stable.
 | Date       | Change                             | Author |
 |------------|------------------------------------|--------|
 | 2026-06-09 | Initial roadmap created            | Claude |
+| 2026-06-10 | Phase 6 complete — sitemap, robots, JSON-LD, metadata | Claude |
+| 2026-06-10 | Phase 7 complete — automated QA; 4 issues found and fixed; manual tests documented | Claude |

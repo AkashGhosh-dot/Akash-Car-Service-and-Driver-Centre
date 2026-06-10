@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X } from "lucide-react";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, BUSINESS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 interface MobileNavProps {
@@ -85,7 +85,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
       >
         {/* Drawer header */}
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
-          <Link href="/" onClick={onClose} className="focus-visible:outline-none">
+          <Link href="/" onClick={onClose} className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-1">
             <span className="block font-heading text-2xl font-bold leading-none tracking-wide text-brand-red">
               AKASH
             </span>
@@ -125,10 +125,10 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         {/* Bottom CTA */}
         <div className="mt-auto border-t border-gray-100 p-4">
           <a
-            href={`tel:+91${9339865491}`}
+            href={`tel:+91${BUSINESS.phonePrimary}`}
             className="flex h-12 w-full items-center justify-center rounded-lg bg-brand-red font-body text-base font-medium text-white transition-colors hover:bg-brand-red-dark"
           >
-            Call Now — 9339865491
+            Call Now — {BUSINESS.phonePrimary}
           </a>
         </div>
       </div>

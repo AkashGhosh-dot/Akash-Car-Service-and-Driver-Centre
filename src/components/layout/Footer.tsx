@@ -12,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {/* Column 1 — Brand + Quick Links */}
           <div>
-            <Link href="/" className="focus-visible:outline-none">
+            <Link href="/" className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
               <span className="block font-heading text-2xl font-bold leading-none tracking-wide text-brand-red">
                 AKASH
               </span>
