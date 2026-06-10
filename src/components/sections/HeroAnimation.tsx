@@ -44,22 +44,14 @@ export function HeroAnimation() {
       {/* ── Content — left column ── */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
         <div className="flex w-full flex-col items-center text-center md:max-w-[48%] md:items-start md:text-left">
-          {/* Badges */}
+          {/* Badge */}
           <motion.div
             {...fadeLeft(0.05, 0.6)}
-            className="mb-6 flex flex-wrap items-center gap-3"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-2 backdrop-blur-sm"
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-2 backdrop-blur-sm">
-              <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-gold">
-                Serving Since {BUSINESS.foundedYear}
-              </span>
-            </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-red/30 bg-brand-red/10 px-4 py-2 backdrop-blur-sm">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-brand-red" aria-hidden="true" />
-              <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
-                Available 24/7
-              </span>
-            </div>
+            <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-gold">
+              Serving Since {BUSINESS.foundedYear}
+            </span>
           </motion.div>
 
           {/* Headline */}
@@ -68,7 +60,7 @@ export function HeroAnimation() {
             className="max-w-xl font-heading text-5xl font-bold leading-tight tracking-wide text-white md:text-6xl lg:text-7xl"
           >
             Your Trusted Transport Partner —{" "}
-            <span className="text-brand-red">Available 24/7</span>
+            <span className="text-brand-red">Since 2000 &bull; 26 Years of Trust</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -76,7 +68,7 @@ export function HeroAnimation() {
             {...fadeLeft(0.4)}
             className="mt-6 max-w-lg font-body text-xl leading-relaxed text-text-secondary"
           >
-            Car rentals, driver hire, bus, truck, and wedding vehicles across
+            24/7 Car Rental, Driver Service, Bus, Traveller, Wedding Vehicles &amp; More across
             Kolkata &amp; West Bengal.
           </motion.p>
 
