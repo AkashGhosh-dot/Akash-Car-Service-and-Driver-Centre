@@ -24,47 +24,43 @@ export function ServicesGrid({
       : "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4";
 
   return (
-    <section className="relative overflow-hidden bg-brand-black py-16 md:py-24">
+    <section
+      className="relative overflow-hidden py-16 md:py-24"
+      style={{
+        background:
+          "linear-gradient(180deg, #030712 0%, #0B1120 30%, #0F172A 60%, #111827 100%)",
+      }}
+    >
 
       {/* ── Background depth layers ── */}
 
-      {/* Top transition — dissolves hard edge from TrustBar */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-28"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(15,23,42,0.75) 0%, transparent 100%)",
-        }}
-      />
-
-      {/* Brand-red ambient glow — upper left */}
+      {/* Blue ambient glow — top right (executive, premium) */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 65% 55% at 12% 22%, rgba(225,29,46,0.07) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 50% at 88% 8%, rgba(59,130,246,0.10) 0%, transparent 70%)",
         }}
       />
 
-      {/* Brand-red ambient glow — lower right */}
+      {/* Brand-red ambient glow — bottom left (brand warmth) */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 55% 50% at 88% 78%, rgba(225,29,46,0.05) 0%, transparent 70%)",
+            "radial-gradient(ellipse 55% 45% at 10% 92%, rgba(225,29,46,0.06) 0%, transparent 70%)",
         }}
       />
 
-      {/* Edge vignette — pulls focus toward the centre */}
+      {/* Edge vignette — pulls focus toward the card grid */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 110% 90% at 50% 50%, transparent 35%, rgba(5,7,11,0.55) 100%)",
+            "radial-gradient(ellipse 110% 90% at 50% 50%, transparent 40%, rgba(3,7,18,0.50) 100%)",
         }}
       />
 
@@ -73,8 +69,7 @@ export function ServicesGrid({
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
         style={{
-          background:
-            "linear-gradient(to top, rgba(5,7,11,0.6) 0%, transparent 100%)",
+          background: "linear-gradient(to top, rgba(3,7,18,0.55) 0%, transparent 100%)",
         }}
       />
 
