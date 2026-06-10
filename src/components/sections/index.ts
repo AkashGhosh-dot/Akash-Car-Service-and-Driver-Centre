@@ -1,4 +1,5 @@
 export { HeroSection } from "./HeroSection";
+export { PageHeader } from "./PageHeader";
 export { ServiceCard } from "./ServiceCard";
 export { ServicesGrid } from "./ServicesGrid";
 export { WhyChooseUs } from "./WhyChooseUs";

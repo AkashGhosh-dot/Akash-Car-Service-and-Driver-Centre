@@ -6,10 +6,22 @@ import { SERVICES } from "@/lib/constants";
 interface ServicesGridProps {
   limit?: number;
   showViewAll?: boolean;
+  columns?: 2 | 4;
+  cardVariant?: "compact" | "detail";
 }
 
-export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) {
+export function ServicesGrid({
+  limit,
+  showViewAll = false,
+  columns = 4,
+  cardVariant = "compact",
+}: ServicesGridProps) {
   const services = limit ? SERVICES.slice(0, limit) : SERVICES;
+
+  const gridClass =
+    columns === 2
+      ? "grid grid-cols-1 gap-6 sm:grid-cols-2"
+      : "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4";
 
   return (
     <section className="bg-white py-16 md:py-24">
@@ -29,9 +41,9 @@ export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) 
         </div>
 
         {/* Grid */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className={`mt-12 ${gridClass}`}>
           {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+            <ServiceCard key={service.id} service={service} variant={cardVariant} />
           ))}
         </div>
 
