@@ -15,26 +15,15 @@ export function HeroCarVisual() {
         fill
         priority
         className="object-cover object-center"
-        sizes="(max-width: 768px) 100vw, 55vw"
+        sizes="100vw"
       />
 
-      {/* Left-edge fade — blends into content column */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(7,18,37,1) 0%, rgba(7,18,37,0.55) 18%, transparent 48%)",
-        }}
-      />
-
-      {/* Bottom fade — grounds into page */}
+      {/* Bottom fade — grounds into page below */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-48"
         style={{
-          background:
-            "linear-gradient(to top, rgba(7,18,37,0.95) 0%, transparent 100%)",
+          background: "linear-gradient(to top, rgba(7,18,37,0.95) 0%, transparent 100%)",
         }}
       />
 
@@ -43,12 +32,11 @@ export function HeroCarVisual() {
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-32"
         style={{
-          background:
-            "linear-gradient(to bottom, rgba(7,18,37,0.6) 0%, transparent 100%)",
+          background: "linear-gradient(to bottom, rgba(7,18,37,0.5) 0%, transparent 100%)",
         }}
       />
 
-      {/* Headlight glow — warm amber, upper-centre of car */}
+      {/* Headlight glow — warm amber */}
       <div
         aria-hidden="true"
         className="absolute inset-0"
@@ -64,17 +52,7 @@ export function HeroCarVisual() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 55% 40% at 80% 92%, rgba(225,29,46,0.2) 0%, transparent 70%)",
-        }}
-      />
-
-      {/* Road reflection — subtle red under the car */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-28"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 100% at 65% 100%, rgba(225,29,46,0.07) 0%, transparent 70%)",
+            "radial-gradient(ellipse 55% 40% at 80% 92%, rgba(225,29,46,0.18) 0%, transparent 70%)",
         }}
       />
     </div>

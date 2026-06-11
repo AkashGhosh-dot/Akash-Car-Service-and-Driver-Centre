@@ -25,25 +25,29 @@ export function HeroAnimation() {
 
   return (
     <div className="relative flex min-h-screen w-full items-center overflow-hidden">
-      {/* ── Vehicle — right half, desktop only ── */}
+      {/* ── Full-screen background image with slow zoom ── */}
       <motion.div
-        initial={{ opacity: reduce ? 1 : 0, x: reduce ? 0 : 80 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: reduce ? 0 : 1.1, delay: reduce ? 0 : 0.35, ease: EASING }}
-        className="absolute right-0 top-0 hidden h-full w-[55%] md:block"
+        className="absolute inset-0"
+        initial={{ scale: 1 }}
+        animate={reduce ? { scale: 1 } : { scale: [1, 1.06, 1] }}
+        transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
       >
-        <motion.div
-          animate={reduce ? {} : { y: [0, -10, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          className="h-full w-full"
-        >
-          <HeroCarVisual />
-        </motion.div>
+        <HeroCarVisual />
       </motion.div>
+
+      {/* ── Luxury dark overlay — left opaque → right transparent ── */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[1]"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(7,18,37,0.92) 0%, rgba(7,18,37,0.75) 35%, rgba(7,18,37,0.35) 70%, rgba(7,18,37,0.10) 100%)",
+        }}
+      />
 
       {/* ── Content — left column ── */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
-        <div className="flex w-full flex-col items-center text-center md:max-w-[48%] md:items-start md:text-left">
+        <div className="flex w-full flex-col items-center text-center md:max-w-[54%] md:items-start md:text-left">
           {/* Badge */}
           <motion.div
             {...fadeLeft(0.05, 0.6)}
