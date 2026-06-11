@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { AboutSnippet } from "@/components/sections/AboutSnippet";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -40,6 +41,7 @@ export default function HomePage() {
       <TrustBar />
       <ServicesGrid showViewAll />
       <WhyChooseUs />
+      <TestimonialsSection />
       <AboutSnippet />
       <ContactSection />
       <CTABanner />

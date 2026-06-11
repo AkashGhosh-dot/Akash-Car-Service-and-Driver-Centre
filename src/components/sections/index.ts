@@ -4,6 +4,7 @@ export { StorySection } from "./StorySection";
 export { ServiceCard } from "./ServiceCard";
 export { ServicesGrid } from "./ServicesGrid";
 export { WhyChooseUs } from "./WhyChooseUs";
+export { TestimonialsSection } from "./TestimonialsSection";
 export { AboutSnippet } from "./AboutSnippet";
 export { MapEmbed } from "./MapEmbed";
 export { ContactSection } from "./ContactSection";
