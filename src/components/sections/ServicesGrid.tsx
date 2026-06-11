@@ -93,10 +93,10 @@ export function ServicesGrid({
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">
-          <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
+          <span className="font-body text-base font-medium uppercase tracking-wider text-brand-red">
             Trusted Since 2000
           </span>
-          <Heading className="mt-2 font-heading text-3xl font-semibold tracking-wide text-white">
+          <Heading className="mt-2 font-heading text-4xl font-semibold tracking-wide text-white md:text-5xl">
             Our Services
           </Heading>
           <p className="mx-auto mt-3 max-w-2xl font-body text-base text-text-secondary">

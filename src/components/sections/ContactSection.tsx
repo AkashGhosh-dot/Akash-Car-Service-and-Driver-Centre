@@ -3,27 +3,67 @@ import { Button, WhatsAppIcon } from "@/components/ui";
 import { MapEmbed } from "./MapEmbed";
 import { BUSINESS } from "@/lib/constants";
 
-export function ContactSection() {
+interface ContactSectionProps {
+  headingLevel?: 1 | 2;
+}
+
+export function ContactSection({ headingLevel = 2 }: ContactSectionProps) {
+  const Heading = `h${headingLevel}` as "h1" | "h2";
   const years = new Date().getFullYear() - BUSINESS.foundedYear;
 
   return (
-    <section className="bg-surface-dark py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section
+      className="relative overflow-hidden py-12 md:py-16"
+      style={{
+        background:
+          "linear-gradient(180deg, #071225 0%, #0A1833 40%, #10244A 100%)",
+      }}
+    >
+      {/* Radial glow behind heading */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 flex justify-center"
+        style={{ height: "320px" }}
+      >
+        <div
+          style={{
+            width: "600px",
+            height: "320px",
+            background:
+              "radial-gradient(circle at center, rgba(37,99,235,0.15), transparent 70%)",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">
-          <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
-            Get In Touch
-          </span>
-          <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-white">
-            Contact Us
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl font-body text-base text-text-secondary">
-            Call or WhatsApp us any time — we&apos;re available 24 hours, 7 days a week.
-          </p>
+          {/* Trust badge */}
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-4 py-1.5">
+            <Award size={13} className="text-brand-gold" aria-hidden="true" />
+            <span
+              className="font-body font-medium uppercase text-brand-gold"
+              style={{ fontSize: "10px", letterSpacing: "0.16em" }}
+            >
+              Trusted Since {BUSINESS.foundedYear} &nbsp;&bull;&nbsp; {years} Years of Service
+            </span>
+          </div>
+
+          <div>
+            <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
+              Get In Touch
+            </span>
+            <Heading className="mt-2 font-heading text-4xl font-semibold tracking-wide text-white md:text-5xl">
+              Contact Us
+            </Heading>
+            <p className="mx-auto mt-3 max-w-xl font-body text-base text-text-secondary">
+              Call or WhatsApp us any time — we&apos;re available 24 hours, 7 days a week.
+            </p>
+          </div>
         </div>
 
         {/* Two-column layout */}
-        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
           {/* Contact details */}
           <div className="flex flex-col gap-6">
             {/* Primary CTA buttons */}
@@ -51,7 +91,7 @@ export function ContactSection() {
             </div>
 
             {/* Contact detail list */}
-            <ul className="flex flex-col gap-4 rounded-xl border border-white/10 bg-brand-black/40 p-6">
+            <ul className="flex flex-col gap-4 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
               <li className="flex items-center gap-3">
                 <Award size={18} className="shrink-0 text-brand-gold" aria-hidden="true" />
                 <span className="font-body text-base font-medium text-brand-gold">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
+import { AkashLogo } from "./AkashLogo";
 import { BUSINESS, NAV_LINKS, SERVICES } from "@/lib/constants";
 
 export function Footer() {
@@ -12,13 +13,12 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {/* Column 1 — Brand + Quick Links */}
           <div>
-            <Link href="/" className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
-              <span className="block font-heading text-2xl font-bold leading-none tracking-wide text-brand-red">
-                AKASH
-              </span>
-              <span className="block font-body text-[10px] font-medium uppercase tracking-widest text-gray-400">
-                Car Service &amp; Driver Centre
-              </span>
+            <Link
+              href="/"
+              className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black"
+              aria-label="Akash Car Service & Driver Centre — Home"
+            >
+              <AkashLogo height={80} />
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-gray-400">
               Trusted transport across Kolkata &amp; West Bengal since {BUSINESS.foundedYear}.

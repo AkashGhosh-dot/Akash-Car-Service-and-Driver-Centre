@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/sections/PageHeader";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { getLocalBusinessSchema } from "@/lib/structured-data";
@@ -32,12 +31,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <PageHeader
-        label="Get In Touch"
-        title="Contact Us"
-        description="We're available 24 hours a day, 7 days a week. Call or WhatsApp us for an instant quote — no hidden charges."
-      />
-      <ContactSection />
+      <ContactSection headingLevel={1} />
       <CTABanner />
     </>
   );

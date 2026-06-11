@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X } from "lucide-react";
 import { NAV_LINKS, BUSINESS } from "@/lib/constants";
+import { AkashLogo } from "./AkashLogo";
 import { cn } from "@/lib/utils";
 
 interface MobileNavProps {
@@ -89,13 +90,9 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             href="/"
             onClick={onClose}
             className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black"
+            aria-label="Akash Car Service & Driver Centre — Home"
           >
-            <span className="block font-heading text-2xl font-bold leading-none tracking-wide text-brand-red">
-              AKASH
-            </span>
-            <span className="block font-body text-[10px] font-medium uppercase tracking-widest text-text-muted">
-              Car Service &amp; Driver Centre
-            </span>
+            <AkashLogo height={70} />
           </Link>
           <button
             ref={closeButtonRef}
