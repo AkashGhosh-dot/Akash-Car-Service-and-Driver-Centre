@@ -5,6 +5,7 @@ interface USPItem {
   icon: LucideIcon;
   title: string;
   description: string;
+  gold?: boolean;
 }
 
 interface WhyChooseUsProps {
@@ -17,8 +18,9 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
   const USP_ITEMS: USPItem[] = [
     {
       icon: Award,
-      title: `${years} Years of Experience`,
+      title: `${years} Years of Transport Excellence`,
       description: `Serving Kolkata and West Bengal since ${BUSINESS.foundedYear}. Over two decades of trusted, continuous transport service that competitors simply cannot match.`,
+      gold: true,
     },
     {
       icon: Clock,
@@ -54,23 +56,40 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
     <section
       className="relative overflow-hidden py-16 md:py-24"
       style={{
-        background: [
-          "radial-gradient(circle at top left, rgba(59,130,246,.12), transparent 35%)",
-          "radial-gradient(circle at bottom right, rgba(147,197,253,.15), transparent 40%)",
-          "linear-gradient(135deg, #F8FBFF 0%, #EAF4FF 50%, #DCEEFF 100%)",
-        ].join(", "),
+        background:
+          "linear-gradient(135deg, #0F2D6B 0%, #163A70 50%, #10244A 100%)",
       }}
     >
+      {/* Ambient glow — top centre */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(37,99,235,0.18) 0%, transparent 70%)",
+        }}
+      />
+
+      {/* Ambient glow — bottom right */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 50% 40% at 90% 100%, rgba(212,160,23,0.08) 0%, transparent 70%)",
+        }}
+      />
+
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">
-          <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">
-            Why Us
+          <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-gold">
+            Why Choose Us
           </span>
-          <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-gray-900">
+          <h2 className="mt-2 font-heading text-3xl font-semibold tracking-wide text-white md:text-4xl">
             Why Choose Akash?
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl font-body text-base text-gray-600">
+          <p className="mx-auto mt-3 max-w-2xl font-body text-base text-text-secondary">
             Over {years} years of continuous service across Kolkata — thousands of customers trust
             us for reliable, on-time transport every single day.
           </p>
@@ -80,21 +99,23 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => {
             const Icon = item.icon;
-            const isExperience = item.icon === Award;
             return (
-              <div key={item.title} className="flex gap-4">
+              <div
+                key={item.title}
+                className="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+              >
                 <div
                   className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg ${
-                    isExperience ? "bg-brand-gold" : "bg-brand-red"
+                    item.gold ? "bg-brand-gold" : "bg-brand-red"
                   }`}
                 >
                   <Icon size={22} className="text-white" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-semibold tracking-wide text-gray-900">
+                  <h3 className="font-heading text-lg font-semibold tracking-wide text-white">
                     {item.title}
                   </h3>
-                  <p className="mt-1 font-body text-sm leading-relaxed text-gray-600">
+                  <p className="mt-1 font-body text-sm leading-relaxed text-text-secondary">
                     {item.description}
                   </p>
                 </div>
@@ -106,4 +127,3 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
     </section>
   );
 }
-

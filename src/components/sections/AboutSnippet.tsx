@@ -4,7 +4,10 @@ import { BUSINESS } from "@/lib/constants";
 
 export function AboutSnippet() {
   return (
-    <section className="bg-brand-black py-16 md:py-24">
+    <section
+      className="py-16 md:py-24"
+      style={{ background: "linear-gradient(135deg, #10244A 0%, #0A1833 100%)" }}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-red">

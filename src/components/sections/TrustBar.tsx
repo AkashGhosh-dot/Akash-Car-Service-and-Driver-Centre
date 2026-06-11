@@ -5,8 +5,8 @@ export function TrustBar() {
   const years = new Date().getFullYear() - BUSINESS.foundedYear;
 
   const items = [
-    `Since ${BUSINESS.foundedYear}`,
-    `${years} Years Experience`,
+    `Est. ${BUSINESS.foundedYear}`,
+    `${years} Years of Transport Excellence`,
     "Available 24/7",
     "Professional Drivers",
     "Kolkata & West Bengal",

@@ -50,7 +50,7 @@ export function HeroAnimation() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-2 backdrop-blur-sm"
           >
             <span className="font-body text-sm font-medium uppercase tracking-wider text-brand-gold">
-              Serving Since {BUSINESS.foundedYear}
+              26 Years of Transport Excellence &nbsp;·&nbsp; Est. {BUSINESS.foundedYear}
             </span>
           </motion.div>
 

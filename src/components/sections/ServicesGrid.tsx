@@ -31,7 +31,7 @@ export function ServicesGrid({
       className="relative overflow-hidden py-16 md:py-24"
       style={{
         background:
-          "linear-gradient(180deg, #030712 0%, #0B1120 30%, #0F172A 60%, #111827 100%)",
+          "linear-gradient(135deg, #10244A 0%, #163A70 50%, #0A1833 100%)",
       }}
     >
 

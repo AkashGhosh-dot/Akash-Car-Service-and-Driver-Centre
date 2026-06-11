@@ -2,13 +2,13 @@
 
 @theme {
   /* Backgrounds / surfaces */
-  --color-brand-black: #05070b;
-  --color-surface-dark: #0f172a;
-  --color-card-surface: #111827;
+  --color-brand-black: #071225;
+  --color-surface-dark: #0a1833;
+  --color-card-surface: #10244a;
 
   /* Brand red */
-  --color-brand-red: #e11d2e;
-  --color-brand-red-hover: #be123c;
+  --color-brand-red: #e53935;
+  --color-brand-red-hover: #c62828;
 
   /* Accent */
   --color-brand-gold: #d4a017;
@@ -41,7 +41,7 @@ body {
   min-height: 100vh;
   font-family: var(--font-body);
   color: #f8fafc;
-  background-color: #05070b;
+  background-color: #071225;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -16,7 +16,7 @@ export function ContactSection({ headingLevel = 2 }: ContactSectionProps) {
       className="relative overflow-hidden py-12 md:py-16"
       style={{
         background:
-          "linear-gradient(180deg, #071225 0%, #0A1833 40%, #10244A 100%)",
+          "linear-gradient(135deg, #071225 0%, #0F2D6B 100%)",
       }}
     >
       {/* Radial glow behind heading */}

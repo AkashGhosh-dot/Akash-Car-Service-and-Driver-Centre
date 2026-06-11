@@ -24,7 +24,7 @@ export function HeroCarVisual() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to right, rgba(5,7,11,1) 0%, rgba(5,7,11,0.55) 18%, transparent 48%)",
+            "linear-gradient(to right, rgba(7,18,37,1) 0%, rgba(7,18,37,0.55) 18%, transparent 48%)",
         }}
       />
 
@@ -34,7 +34,7 @@ export function HeroCarVisual() {
         className="absolute inset-x-0 bottom-0 h-48"
         style={{
           background:
-            "linear-gradient(to top, rgba(5,7,11,0.95) 0%, transparent 100%)",
+            "linear-gradient(to top, rgba(7,18,37,0.95) 0%, transparent 100%)",
         }}
       />
 
@@ -44,7 +44,7 @@ export function HeroCarVisual() {
         className="absolute inset-x-0 top-0 h-32"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(5,7,11,0.6) 0%, transparent 100%)",
+            "linear-gradient(to bottom, rgba(7,18,37,0.6) 0%, transparent 100%)",
         }}
       />
 
