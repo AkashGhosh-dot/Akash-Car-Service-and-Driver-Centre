@@ -54,30 +54,13 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
     <section
       className="relative overflow-hidden py-16 md:py-24"
       style={{
-        background:
-          "linear-gradient(135deg, #EAF4FF 0%, #DCEEFF 50%, #F8FBFF 100%)",
+        background: [
+          "radial-gradient(circle at top left, rgba(59,130,246,.12), transparent 35%)",
+          "radial-gradient(circle at bottom right, rgba(147,197,253,.15), transparent 40%)",
+          "linear-gradient(135deg, #F8FBFF 0%, #EAF4FF 50%, #DCEEFF 100%)",
+        ].join(", "),
       }}
     >
-      {/* Subtle top-right accent glow */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 55% 48% at 92% 5%, rgba(59,130,246,0.12) 0%, transparent 65%)",
-        }}
-      />
-
-      {/* Subtle bottom-left accent glow */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 50% 44% at 5% 95%, rgba(99,155,255,0.10) 0%, transparent 60%)",
-        }}
-      />
-
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">
@@ -123,3 +106,4 @@ export function WhyChooseUs({ limit }: WhyChooseUsProps) {
     </section>
   );
 }
+

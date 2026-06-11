@@ -7,10 +7,7 @@ export function ContactSection() {
   const years = new Date().getFullYear() - BUSINESS.foundedYear;
 
   return (
-    <section
-      className="py-16 md:py-24"
-      style={{ background: "linear-gradient(135deg, #0F172A 0%, #1E293B 100%)" }}
-    >
+    <section className="bg-surface-dark py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center">

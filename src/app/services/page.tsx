@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/sections/PageHeader";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { getServiceSchema } from "@/lib/structured-data";
@@ -36,12 +35,7 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <PageHeader
-        label="What We Offer"
-        title="Our Services"
-        description="Every vehicle type, any distance, any time. Call or WhatsApp for an instant quote — we cover all of Kolkata and West Bengal, 24 hours a day, 7 days a week."
-      />
-      <ServicesGrid columns={2} cardVariant="detail" />
+      <ServicesGrid columns={2} cardVariant="detail" headingLevel={1} />
       <CTABanner />
     </>
   );
