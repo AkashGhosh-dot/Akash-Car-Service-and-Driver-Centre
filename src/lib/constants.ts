@@ -8,7 +8,7 @@ export const BUSINESS = {
   phonePrimary: "9339865491",
   whatsapp: "9339865491",
   whatsappUrl:
-    "https://wa.me/919339865491?text=Hello%2C%20I%27m%20interested%20in%20your%20car%2Fdriver%20service.%20Please%20share%20details%20and%20pricing.",
+    "https://wa.me/919339865491?text=Hello%2C%20I%27m%20interested%20in%20your%20car%2Fdriver%20service.%20Please%20share%20details.",
   email: "akashbusinessghosh@gmail.com",
   address: {
     street: "New Barrackpore",
