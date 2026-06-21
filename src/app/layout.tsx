@@ -3,6 +3,7 @@ import { Oswald, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingCTA } from "@/components/layout/FloatingCTA";
+import ChatWidget from "@/components/ChatWidget";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingCTA />
+        <ChatWidget />
       </body>
     </html>
   );
